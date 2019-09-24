@@ -20,7 +20,7 @@ affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
 
 btnClick.addEventListener("click", function() {
     score = score + click;
-    afficheScore.innerHTML = score;
+    afficheScore.innerHTML = "Vous avez "+score+" planètes";
 });
 
 btnMulti.addEventListener("click", function() {
@@ -29,8 +29,8 @@ btnMulti.addEventListener("click", function() {
         click = click + 1;
         score = score - prixMulti;
         prixMulti = prixMulti * 2;
-        multi.innerHTML = click;
-        afficheScore.innerHTML = score;
+        multi.innerHTML = "Vos cliques sont multipliés par "+click;
+        afficheScore.innerHTML = "Vous avez "+score+" planètes";
         affichePrixMulti.innerHTML = "Multiplicateur (prix = " + prixMulti + ")";
     } else {
         alert("Il te faut plus de cliques !!!");
@@ -44,7 +44,7 @@ btnAuto.addEventListener("click", function() {
         afficheScore.innerHTML = score;
         auto = auto + 1;
         prixAuto = prixAuto * 2;
-        afficheAuto.innerHTML = auto;
+        afficheAuto.innerHTML = "Vous avez "+auto+" cliques auto par secondes";
         affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
     } else {
         alert("Il te faut plus de cliques !!!");
@@ -53,7 +53,7 @@ btnAuto.addEventListener("click", function() {
 
 function autoclick() {
     score = score + auto;
-    afficheScore.innerHTML = score;
+    afficheScore.innerHTML = "Vous avez "+score+" planètes";
 }
 
 setInterval(autoclick, 1000);
@@ -67,19 +67,20 @@ function bonus() {
 }
 
 btnBonus.addEventListener("click", function() {
-    var i = 30;
-		i--;
-    if (i > 0){
-        setTimeout(intervale, 1000);
+    i=30;
+    compte = setInterval(decompte,1000);
+    click = click*2;
+    auto = auto*2;
+    score = score-100;
     
-	}
-	else
-	{
-		i = 30 ;
-	}    
-    
-    function intervale(){
-        afficheBonus.innerHTML = i;
-        
-    }
 });
+function decompte(){
+    afficheBonus.innerHTML = "Temps restant : "+i+" sec";
+    i--;
+    if(i<=0){
+        clearInterval(compte);
+        afficheBonus.innerHTML = "Aucun bonus en cours";
+        click = click/2;
+        auto = auto/2;
+    }
+}
