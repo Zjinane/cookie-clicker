@@ -6,14 +6,20 @@
 .container-fluid
 {
     background-color: rgb(12, 12, 41);
-    height: auto;
-    width: 100%;
+}
+
+.cover
+{
+    background-color: rgb(12, 12, 41);
+    height: 100vh;
+    width: auto;
 }
 
 .leftcol
 {
     border-right:solid white 2px;
     color: antiquewhite;
+    height: 100vh;
 }
 
 #title
@@ -48,4 +54,13 @@ h3
 {
     padding: 3px;
     padding-top: 10px;
+}
+
+#main
+{
+    background-image: url(/assets/images/PhotoFunia-1569319560.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
 }
