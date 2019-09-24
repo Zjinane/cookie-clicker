@@ -58,20 +58,22 @@ function autoclick() {
 
 setInterval(autoclick, 1000);
 
-
-function bonus(){
-	for(let i = 30 ; i < 0; i--){
-	setTimeout(function(){document.getElementById("afficheBonus").innerHTML = i} , 1000)
-	}
+function bonus() {
+    for (let i = 30; i < 0; i--) {
+        setTimeout(function() {
+            document.getElementById("afficheBonus").innerHTML = i;
+        }, 1000);
+    }
 }
 
-btnBonus.addEventListener("click", function(){
-	for(let i = 30 ; i < 0; i--){
-/*	setTimeout(function(){document.getElementById("afficheBonus").innerHTML = i} , 1000)*/
-console.log(i);
-}	
+btnBonus.addEventListener("click", function() {
+    var i = 0;
+    while(i>=0){
+        setTimeout(intervale, 1000);
+        i++;
+    }
+    function intervale(){
+        afficheBonus.innerHTML = i;
+        
+    }
 });
-
-
-
-
