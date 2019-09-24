@@ -1,0 +1,51 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container-fluid
+{
+    background-color: rgb(12, 12, 41);
+    height: auto;
+    width: 100%;
+}
+
+.leftcol
+{
+    border-right:solid white 2px;
+    color: antiquewhite;
+}
+
+#title
+{
+    border-bottom:solid white 2px;
+    color: aquamarine;
+}
+
+h3
+{
+    color: aquamarine;
+    padding-top: 5px;
+}
+
+.rightcol
+{
+    border-left:solid white 2px;
+    color: antiquewhite;
+}
+
+#scorebox
+{
+    border-bottom:solid white 2px;
+}
+
+#bonus
+{
+    margin: 15px;
+}
+
+#log
+{
+    padding: 3px;
+    padding-top: 10px;
+}
