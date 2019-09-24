@@ -3,7 +3,6 @@ var score = 0;
 var prixMulti = 10;
 var auto = 0;
 var prixAuto = 50;
-var multiAuto = 0;
 
 var btnMulti = document.getElementById("btnMulti");
 var afficheScore = document.getElementById("afficheScore");
@@ -13,6 +12,8 @@ var affichePrixMulti = document.getElementById("affichePrixMulti");
 var affichePrixAuto = document.getElementById("affichePrixAuto");
 var afficheAuto = document.getElementById("afficheAuto");
 var btnAuto = document.getElementById("btnAuto");
+var afficheBonus = document.getElementById("afficheBonus");
+var btnBonus = document.getElementById("btnBonus");
 
 affichePrixMulti.innerHTML = "Multiplicateur (prix = " + prixMulti + ")";
 affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
@@ -51,9 +52,26 @@ btnAuto.addEventListener("click", function() {
 });
 
 function autoclick() {
-    multiAuto = click * auto;
-    score = score + multiAuto;
+    score = score + auto;
     afficheScore.innerHTML = score;
 }
 
 setInterval(autoclick, 1000);
+
+
+function bonus(){
+	for(let i = 30 ; i < 0; i--){
+	setTimeout(function(){document.getElementById("afficheBonus").innerHTML = i} , 1000)
+	}
+}
+
+btnBonus.addEventListener("click", function(){
+	for(let i = 30 ; i < 0; i--){
+/*	setTimeout(function(){document.getElementById("afficheBonus").innerHTML = i} , 1000)*/
+console.log(i);
+}	
+});
+
+
+
+
