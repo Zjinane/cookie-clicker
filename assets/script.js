@@ -67,11 +67,17 @@ function bonus() {
 }
 
 btnBonus.addEventListener("click", function() {
-    var i = 0;
-    while(i>=0){
+    var i = 30;
+		i--;
+    if (i > 0){
         setTimeout(intervale, 1000);
-        i++;
-    }
+    
+	}
+	else
+	{
+		i = 30 ;
+	}    
+    
     function intervale(){
         afficheBonus.innerHTML = i;
         
