@@ -3,6 +3,13 @@
     box-sizing: border-box;
 }
 
+@font-face
+{
+    font-family:alienfont;
+    src: url(/assets/fonts/over-there.ttf);
+}
+
+
 .container-fluid
 {
     background-color: rgb(12, 12, 41);
@@ -26,12 +33,14 @@
 {
     border-bottom:solid white 2px;
     color: aquamarine;
+    padding-top:4%;
 }
 
-h3
+.names
 {
-    color: aquamarine;
-    padding-top: 5px;
+    color: rgb(188, 243, 144);
+    padding-top: 15px;
+    font-family: alienfont;
 }
 
 .rightcol
@@ -45,10 +54,6 @@ h3
     border-bottom:solid white 2px;
 }
 
-#bonus
-{
-    margin: 15px;
-}
 
 #log
 {
@@ -61,6 +66,134 @@ h3
     background-image: url(/assets/images/PhotoFunia-1569319560.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     width: auto;
+}
+
+.planet
+{
+    border-radius: 50%;
+    background-image: url(/assets/images/planet_placeholder_512.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 512px;
+    width:512px;
+    border:none;
+    outline: none;
+}
+
+.planet:active
+{
+    outline: none;
+    background-color: rgba(255, 65, 223, 0.705);
+}
+
+.planet:focus
+{
+    outline:none;
+}
+
+.planet:hover
+{
+    outline: none;
+}
+
+#inv-img
+{
+    border-right: 2px solid white;
+}
+
+#inv-item
+{
+    border-bottom: solid 2px white;
+    padding-top:15px;
+}
+
+#inv-txt
+{
+    font-family: alienfont;
+}
+
+#multiplicator
+{
+    background-image: url(/assets/images/filet.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64px;
+    width: 64px;
+
+}
+
+#autoclick
+{
+    background-image: url(/assets/images/fbi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64px;
+    width: 64px;
+}
+
+#bonus
+{
+    background-image: url(/assets/images/vaisseau.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64px;
+    width: 64px;
+}
+
+.but
+{
+    margin:5%;
+    font-family: alienfont;
+}
+.scoreplace
+{
+    border-radius:5px;
+    border: solid 3px greenyellow;
+    background-color:transparent;
+    color:whitesmoke;
+    margin:4%;
+    padding:1%;
+    text-align: center;
+    width:100%;
+    font-family: alienfont;
+}
+
+#magabox
+{
+    border-bottom:solid 2px white;
+}
+
+#alienhead
+{
+    height: 10%;
+    width: auto;
+}
+
+#save
+{
+    background-color: transparent;
+    color: aliceblue;
+    border:none;
+    outline: none;
+}
+
+#save:active
+{
+    color: rgb(255, 124, 222);
+}
+
+#load
+{
+    background-color: transparent;
+    color: aliceblue;
+    border:none;
+    outline: none;
+}
+
+#load:active
+{
+    color: rgb(255, 124, 222);
 }
