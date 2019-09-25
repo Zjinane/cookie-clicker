@@ -5,8 +5,6 @@ var auto = 0;
 var prixAuto = 50;
 var bonus = false;
 
-
-.
 var btnMulti = document.getElementById("multiplicator");
 var afficheScore = document.getElementById("afficheScore");
 var btnClick = document.getElementById("planet");
@@ -72,6 +70,7 @@ btnBonus.addEventListener("click", function() {
     score = score - 100;
     btnMulti.disabled = true;
     btnAuto.disabled = true;
+    btnBonus.disabled = true;
 });
 
 function decompte() {
@@ -82,9 +81,10 @@ function decompte() {
         afficheBonus.innerHTML = "0";
         bonus = false;
         click = click / 2;
-    auto = auto / 2;
+        auto = auto / 2;
         btnMulti.disabled = false;
         btnAuto.disabled = false;
+        btnBonus.disabled = false;
     }
 }
 
@@ -100,11 +100,11 @@ function hideBtn() {
         } else {
             btnAuto.disabled = false;
         }
-    }
-    if (score < 100) {
-        btnBonus.disabled = true;
-    } else {
-        btnBonus.disabled = false;
+        if (score < 100) {
+            btnBonus.disabled = true;
+        } else {
+            btnBonus.disabled = false;
+        }
     }
 }
 
