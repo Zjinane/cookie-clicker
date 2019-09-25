@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='icon' href='/assets/images/alien.png'>
+    <title>PlanetClick</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="container-fluid cover">
+
+        <div class="row">
+
+            <article class="col-2 leftcol">
+
+                <div class="row justify-content-center" id="title">
+
+                    <p class="names">Inventory</p>
+                    
+                </div>
+
+                <div class="row" id="inv-item">
+
+                    <figure class="col-6" id="inv-img">
+                        <img src="/assets/images/filet.png" alt="filet à papillon">
+                    </figure>
+
+                    <article class="col-6" id="inv-txt">
+                        <p id="afficheMulti">0</p>
+                    </article>
+
+                </div>
+
+                <div class="row" id="inv-item">
+
+                    <figure class="col-6" id="inv-img">
+                        <img src="/assets/images/fbi.png" alt="agent du fbi">
+                    </figure>
+
+                    <article class="col-6" id="inv-txt">
+                        <p id="afficheAuto">0</p>
+                    </article>
+
+                </div>
+
+                <div class="row" id="inv-item">
+
+                    <figure class="col-6" id="inv-img">
+                        <img src="/assets/images/vaisseau.png" alt="vaisseau alien">
+                    </figure>
+
+                    <article class="col-6" id="inv-txt">
+                        <p id="afficheBonus">0</p>
+                    </article>
+
+                </div>
+
+
+            </article>
+        
+            <article id="main" class="container-fluid col-7">
+
+                <div class="row justify-content-center">
+                    <button id="planet" class="planet"></button>
+                </div>
+
+            </article>
+        
+            <article class="col-3 rightcol">
+
+                <div class="row justify-content-center" id="scorebox">
+
+                    <section class="score">
+
+                        <div class="row">
+                            <p class="names">Aliens</p>
+                        </div>
+                        <div class="row">
+                            <p class="names">Collected </p>
+                            <img src="/assets/images/alien.png" alt="alien head" id="alienhead">
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <article class="scoreplace">
+                                <p id="afficheScore">000000</p>
+                            </article>
+                        </div>
+                        
+                    </section>
+
+                </div>
+
+                <div class="row justify-content-center" id="magabox">
+
+                    <section class="magasin">
+
+                        <div class="row justify-content-center">
+                            <p class="names">Shop</p>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="container-fluid">
+
+                                <div class="row justify-content-center">
+                                    <button id="multiplicator" class="but"></button>
+                                    <button id="autoclick" class="but"></button>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <button id="bonus" class="but"></button>
+                                    <!--<button id="">multip</button>-->
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+
+                <div class="row">
+
+                    <div class="container-fluid">
+
+                        <div class="row justify-content-center">
+                            <button class="but" id="save">save</button>
+                            <button class="but" id="load">load</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </article>
+
+        </div>
+    </div>
+
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
