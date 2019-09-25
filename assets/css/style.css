@@ -122,6 +122,7 @@
     background-position: center;
     height: 64px;
     width: 64px;
+    border-right:solid 2px white;
 
 }
 
@@ -134,6 +135,7 @@
     width: 64px;
 }
 
+
 #bonus
 {
     background-image: url(/assets/images/vaisseau.png);
@@ -142,6 +144,12 @@
     height: 64px;
     width: 64px;
 }
+
+#shopcont
+{
+    border-right:solid 2px white;
+}
+
 
 .but
 {
@@ -180,10 +188,17 @@
     outline: none;
 }
 
+#save:hover
+{
+    color: rgb(255, 124, 222);
+}
+
 #save:active
 {
     color: rgb(255, 124, 222);
 }
+
+
 
 #load
 {
@@ -191,6 +206,11 @@
     color: aliceblue;
     border:none;
     outline: none;
+}
+
+#load:hover
+{
+    color: rgb(255, 124, 222);
 }
 
 #load:active
