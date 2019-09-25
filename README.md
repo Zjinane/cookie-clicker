@@ -7,7 +7,7 @@ Le gameplay sans fin en fait un jeu qui peut durer une durée indéterminée, ou
 
 
 
-![alien](assets/images/alien.gif)
+![alien](assets/images/alien2.gif)
 
 
 
