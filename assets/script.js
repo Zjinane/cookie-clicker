@@ -79,6 +79,8 @@ function decompte() {
         clearInterval(compte);
         afficheBonus.innerHTML = "0";
         bonus = false;
+        click = click / 2;
+    auto = auto / 2;
         btnMulti.disabled = false;
         btnAuto.disabled = false;
     }
