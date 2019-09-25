@@ -84,3 +84,4 @@ function decompte(){
         auto = auto/2;
     }
 }
+tralala
