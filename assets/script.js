@@ -5,16 +5,16 @@ var auto = 0;
 var prixAuto = 50;
 var bonus = false;
 
-var btnMulti = document.getElementById("btnMulti");
+var btnMulti = document.getElementById("multiplicator");
 var afficheScore = document.getElementById("afficheScore");
-var btnClick = document.getElementById("btnClick");
-var multi = document.getElementById("multi");
+var btnClick = document.getElementById("planet");
+var multi = document.getElementById("afficheMulti");
 var affichePrixMulti = document.getElementById("affichePrixMulti");
 var affichePrixAuto = document.getElementById("affichePrixAuto");
 var afficheAuto = document.getElementById("afficheAuto");
-var btnAuto = document.getElementById("btnAuto");
+var btnAuto = document.getElementById("autoclick");
 var afficheBonus = document.getElementById("afficheBonus");
-var btnBonus = document.getElementById("btnBonus");
+var btnBonus = document.getElementById("bonus");
 var save = document.getElementById("save");
 var load = document.getElementById("load");
 
@@ -23,15 +23,15 @@ affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
 
 btnClick.addEventListener("click", function() {
     score = score + click;
-    afficheScore.innerHTML = "Vous avez " + score + " planètes";
+    afficheScore.innerHTML = score;
 });
 
 btnMulti.addEventListener("click", function() {
     click = click + 1;
     score = score - prixMulti;
     prixMulti = prixMulti * 2;
-    multi.innerHTML = "Vos cliques sont multipliés par " + click;
-    afficheScore.innerHTML = "Vous avez " + score + " planètes";
+    multi.innerHTML = click;
+    afficheScore.innerHTML = score;
     affichePrixMulti.innerHTML = "Multiplicateur (prix = " + prixMulti + ")";
 });
 
@@ -42,13 +42,13 @@ btnAuto.addEventListener("click", function() {
     afficheScore.innerHTML = score;
     auto = auto + 1;
     prixAuto = prixAuto * 2;
-    afficheAuto.innerHTML = "Vous avez " + auto + " cliques auto par secondes";
+    afficheAuto.innerHTML = auto;
     affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
 });
 
 function autoclick() {
     score = score + auto;
-    afficheScore.innerHTML = "Vous avez " + score + " aliens";
+    afficheScore.innerHTML = score;
 }
 
 setInterval(autoclick, 1000);
@@ -73,11 +73,11 @@ btnBonus.addEventListener("click", function() {
 });
 
 function decompte() {
-    afficheBonus.innerHTML = "Temps restant : " + i + " sec";
+    afficheBonus.innerHTML = i + " sec";
     i--;
     if (i <= 0) {
         clearInterval(compte);
-        afficheBonus.innerHTML = "Aucun bonus en cours";
+        afficheBonus.innerHTML = "0";
         bonus = false;
         btnMulti.disabled = false;
         btnAuto.disabled = false;
@@ -120,9 +120,9 @@ load.addEventListener("click", function() {
     auto = +localStorage.getItem("auto");
     prixMulti = +localStorage.getItem("prixMulti");
     prixAuto = +localStorage.getItem("prixAuto");
-    afficheScore.innerHTML = "Vous avez " + score + " planètes";
-    afficheAuto.innerHTML = "Vous avez " + auto + " cliques auto par secondes";
-    multi.innerHTML = "Vos cliques sont multipliés par " + click;
+    afficheScore.innerHTML = score;
+    afficheAuto.innerHTML = auto;
+    multi.innerHTML = click;
     affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
     affichePrixMulti.innerHTML = "Multiplicateur (prix = " + prixMulti + ")";
     alert("Chargé");
