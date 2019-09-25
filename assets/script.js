@@ -3,6 +3,7 @@ var score = 0;
 var prixMulti = 10;
 var auto = 0;
 var prixAuto = 50;
+var bonus = false;
 
 var btnMulti = document.getElementById("btnMulti");
 var afficheScore = document.getElementById("afficheScore");
@@ -59,7 +60,7 @@ setInterval(autoclick, 1000);
 function bonus() {
     for (let i = 30; i < 0; i--) {
         setTimeout(function() {
-            document.getElementById("afficheBonus").innerHTML = i;
+            afficheBonus.innerHTML = i;
         }, 1000);
     }
 }
@@ -71,8 +72,10 @@ if(score >= 100){
     compte = setInterval(decompte,1000);
     click = click*2;
     auto = auto*2;
+	bonus = true;
     score = score-100;
-
+	btnMulti.disabled = true ;
+	btnAuto.disabled = true ; 
 }
 else
 {
@@ -86,12 +89,19 @@ function decompte(){
     if(i<=0){
         clearInterval(compte);
         afficheBonus.innerHTML = "Aucun bonus en cours";
-        click = click/2;
-        auto = auto/2;
-    }
+        click = Math.round(click/2);
+        auto = Math.round(auto/2);
+		bonus = false;
+		btnMulti.disabled = false;
+		btnAuto.disabled = false;
+		multi.innerHTML = click ;
+		afficheAuto.innerHTML = auto;
+}
 }
 
 function hideBtn(){
+if(bonus == false){
+
 if(score < prixMulti){
 	btnMulti.disabled = true ;
 }
@@ -110,7 +120,7 @@ if(score < 100){
 else{
 	btnBonus.disabled = false ;
 }
-
+}
 }
 
 setInterval(hideBtn,100);
