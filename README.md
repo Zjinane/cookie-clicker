@@ -21,6 +21,11 @@ Le gameplay sans fin en fait un jeu qui peut durer une durée indéterminée, ou
 
 ## Contribuant
 
-[Alice](https://github.com/Frankiethezombie)
+- Artist [Alice](https://github.com/Frankiethezombie)
 
-[Guillaume](https://github.com/GuillaumeDery98)
+- Collaborateur Java-Script [Guillaume](https://github.com/GuillaumeDery98)
+
+## Credits 
+
+- Credits d'image [Photofunia]( https://photofunia.com/effects/retro-wave)
+- Credits font [font](https://www.dafont.com/over-there.font?text=alien+clicker)
