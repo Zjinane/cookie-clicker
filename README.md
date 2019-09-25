@@ -14,13 +14,13 @@ Le gameplay sans fin en fait un jeu qui peut durer une durée indéterminée, ou
 
 ## Langages utilisés
 
--HTML
--CSS
--Java-script
+- HTML
+- CSS
+- Java-script
 
 
 ## Contribuant
 
-Alice ![](https://github.com/Frankiethezombie)
+[Alice](https://github.com/Frankiethezombie)
 
-Guillaume ![](https://github.com/GuillaumeDery98)
+[Guillaume](https://github.com/GuillaumeDery98)
