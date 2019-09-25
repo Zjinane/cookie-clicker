@@ -39,16 +39,14 @@ btnMulti.addEventListener("click", function() {
 
 btnAuto.addEventListener("click", function() {
     var testeurScore = score - prixAuto;
-    if (testeurScore >= 0) {
+       (testeurScore >= 0) 
         score = score - prixAuto;
         afficheScore.innerHTML = score;
         auto = auto + 1;
         prixAuto = prixAuto * 2;
         afficheAuto.innerHTML = "Vous avez "+auto+" cliques auto par secondes";
         affichePrixAuto.innerHTML = "Auto-click (prix = " + prixAuto + ")";
-    } else {
-        alert("Il te faut plus de cliques !!!");
-    }
+    
 });
 
 function autoclick() {
@@ -67,12 +65,20 @@ function bonus() {
 }
 
 btnBonus.addEventListener("click", function() {
-    i=30;
+
+if(score >= 100){
+	i=30;
     compte = setInterval(decompte,1000);
     click = click*2;
     auto = auto*2;
     score = score-100;
-    
+
+}
+else
+{
+alert("Il vous faut plus de cliques");
+}
+
 });
 function decompte(){
     afficheBonus.innerHTML = "Temps restant : "+i+" sec";
@@ -84,4 +90,28 @@ function decompte(){
         auto = auto/2;
     }
 }
-tralala
+
+function hideBtn(){
+if(score < prixMulti){
+	btnMulti.disabled = true ;
+}
+else{
+	btnMulti.disabled = false ;
+}
+if(score < prixAuto){
+	btnAuto.disabled = true ;
+}
+else{
+	btnAuto.disabled = false ;
+}
+if(score < 100){
+	btnBonus.disabled = true;
+}
+else{
+	btnBonus.disabled = false ;
+}
+
+}
+
+setInterval(hideBtn,100);
+
