@@ -5,6 +5,8 @@ var auto = 0;
 var prixAuto = 50;
 var bonus = false;
 
+
+.
 var btnMulti = document.getElementById("multiplicator");
 var afficheScore = document.getElementById("afficheScore");
 var btnClick = document.getElementById("planet");
