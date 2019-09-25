@@ -78,8 +78,6 @@ function decompte() {
     if (i <= 0) {
         clearInterval(compte);
         afficheBonus.innerHTML = "Aucun bonus en cours";
-        click = Math.round(click / 2);
-        auto = Math.round(auto / 2);
         bonus = false;
         btnMulti.disabled = false;
         btnAuto.disabled = false;
@@ -98,11 +96,11 @@ function hideBtn() {
         } else {
             btnAuto.disabled = false;
         }
-        if (score < 100) {
-            btnBonus.disabled = true;
-        } else {
-            btnBonus.disabled = false;
-        }
+    }
+    if (score < 100) {
+        btnBonus.disabled = true;
+    } else {
+        btnBonus.disabled = false;
     }
 }
 
