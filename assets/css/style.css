@@ -63,7 +63,7 @@
 
 #main
 {
-    background-image: url(assets/images/PhotoFunia-1569319560.jpg);
+    background-image: url(../images/PhotoFunia-1569319560.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -73,7 +73,7 @@
 .planet
 {
     border-radius: 50%;
-    background-image: url(assets/images/planet_placeholder_512.png);
+    background-image: url(../images/planet_placeholder_512.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -117,7 +117,7 @@
 
 #multiplicator
 {
-    background-image: url(assets/images/filet.png);
+    background-image: url(../images/filet.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 64px;
@@ -128,7 +128,7 @@
 
 #autoclick
 {
-    background-image: url(assets/images/fbi.png);
+    background-image: url(../images/fbi.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 64px;
@@ -138,7 +138,7 @@
 
 #bonus
 {
-    background-image: url(assets/images/vaisseau.png);
+    background-image: url(../images/vaisseau.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 64px;
