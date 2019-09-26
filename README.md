@@ -23,7 +23,9 @@ Le gameplay sans fin en fait un jeu qui peut durer une durée indéterminée, ou
 
 - Artist [Alice](https://github.com/Frankiethezombie)
 
-- Collaborateur Java-Script [Guillaume](https://github.com/GuillaumeDery98)
+Pair Programming Java-Script
+- [Jinane](https://github.com/Zjinane)
+- [Guillaume](https://github.com/GuillaumeDery98)
 
 ## Credits 
 
